@@ -144,6 +144,16 @@ How do you run a playbook? It’s simple. Let’s run a playbook using a paralle
 ansible-playbook playbook.yml -f 10
 ```
 [Documentation](https://docs.ansible.com/ansible/latest/user_guide/playbooks.html)
+
+## Ansible Tower
+**Ansible Tower** helps you scale IT automation, manage complex deployments and speed productivity. Centralize and control your IT infrastructure with a visual dashboard, role-based access control, job scheduling, integrated notifications and graphical inventory management. And Ansible Tower's REST API and CLI make it easy to embed Ansible Tower into existing tools and processes.
+
+The Ansible Tower dashboard provides a heads-up NOC-style display for everything going on in your Ansible environment.
+
+As soon as you log in, you'll see your host and inventory status, all the recent job activity and a snapshot of recent job runs. Adjust your job status settings to graph data from specific job and time ranges.
+![](https://www.ansible.com/hs-fs/hubfs/2018_Images/Tower-Product-Screens/Tower-3-3-Dashboard-2x.png?width=598&height=422&name=Tower-3-3-Dashboard-2x.png)
+
+[Documentation](https://www.ansible.com/products/tower)
 ## License
 Copyright © 2015-2018 Codica. It is released under the [MIT License](https://opensource.org/licenses/MIT).
 
