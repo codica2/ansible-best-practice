@@ -1,0 +1,20 @@
+---
+- hosts: [host]
+  remote_user: [user]
+  become: true
+
+  tasks:
+
+  - name: Import YARN APT key
+    apt_key:
+      url: "https://dl.yarnpkg.com/debian/pubkey.gpg"
+      state: present
+
+  - name: Import source
+    apt_repository:
+      repo: "deb https://dl.yarnpkg.com/debian/ stable main"
+      state: present
+
+  - name: install yarn
+    apt: update_cache=yes pkg=yarn state=present
+

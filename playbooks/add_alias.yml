@@ -1,0 +1,58 @@
+---
+- hosts: [host]
+  remote_user: [user]
+
+  tasks:
+  - lineinfile:
+      path: /home/{{ansible_user}}/.zshrc
+      state: present
+      insertafter: 'EOF'
+      line: 'alias update="sudo apt update"'
+
+  - lineinfile:
+      path: /home/{{ansible_user}}/.zshrc
+      state: present
+      insertafter: 'EOF'
+      line: 'alias rc="RAILS_ENV=production bundle exec rails c"'
+
+  - lineinfile:
+      path: /home/{{ansible_user}}/.zshrc
+      state: present
+      insertafter: 'EOF'
+      line: 'alias se="cd /etc/nginx/sites-enabled"'
+
+  - lineinfile:
+      path: /home/{{ansible_user}}/.zshrc
+      state: present
+      insertafter: 'EOF'
+      line: 'alias sa="cd /etc/nginx/sites-available"'
+
+  - lineinfile:
+      path: /home/{{ansible_user}}/.zshrc
+      state: present
+      insertafter: 'EOF'
+      line: 'alias rdm="RAILS_ENV=production bundle exec rake db:migrate"'
+
+  - lineinfile:
+      path: /home/{{ansible_user}}/.zshrc
+      state: present
+      insertafter: 'EOF'
+      line: 'alias nginxt="sudo nginx -t"'
+
+  - lineinfile:
+      path: /home/{{ansible_user}}/.zshrc
+      state: present
+      insertafter: 'EOF'
+      line: 'alias nginxs="sudo nginx -s reload"'
+
+  - lineinfile:
+      path: /home/{{ansible_user}}/.zshrc
+      state: present
+      insertafter: 'EOF'
+      line: 'alias prod="RAILS_ENV=production bundle exec"'
+
+  - lineinfile:
+      path: /home/{{ansible_user}}/.zshrc
+      state: present
+      insertafter: 'EOF'
+      line: 'alias upgrade="sudo apt upgrade"'
