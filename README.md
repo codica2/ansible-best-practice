@@ -70,6 +70,33 @@ all:
         three.example.com:
 ```
 [Documentation](https://docs.ansible.com/ansible/latest/user_guide/intro_inventory.html)
+## Modules
+
+Ansible ships with a number of modules (called the ‘module library’) that can be executed directly on remote hosts or through Playbooks.
+
+Users can also write their own modules. These modules can control system resources, like services, packages, or files (anything really), or handle executing system commands.
+
+Modules (also referred to as “task plugins” or “library plugins”) are discrete units of code that can be used from the command line or in a playbook task.
+
+Let’s review how we execute three different modules from the command line:
+
+```zh
+ansible webservers -m service -a "name=httpd state=started"
+ansible webservers -m ping
+ansible webservers -m command -a "/sbin/reboot -t now"
+```
+
+Each module supports taking arguments. Nearly all modules take key=value arguments, space delimited. Some modules take no arguments, and the command/shell modules simply take the string of the command you want to run.
+
+From playbooks, Ansible modules are executed in a very similar way:
+```yml
+- name: reboot the servers
+  action: command /sbin/reboot -t now
+```
+All modules technically return JSON format data, though if you are using the command line or playbooks, you don’t really need to know much about that. If you’re writing your own module, you care, and this means you do not have to write modules in any particular language – you get to choose.
+
+[Documentation](https://docs.ansible.com/ansible/latest/user_guide/modules_intro.html)
+
 ## Playbooks
 **Playbooks** are Ansible’s configuration, deployment, and orchestration language. They can describe a policy you want your remote systems to enforce, or a set of steps in a general IT process.
 
