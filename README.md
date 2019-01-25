@@ -1,6 +1,6 @@
 <h1 align="center">Ansible examples</h1>
 
-![](https://cdn.iconscout.com/icon/free/png-256/ansible-282283.png)
+[![](https://cdn.iconscout.com/icon/free/png-256/ansible-282283.png)](https://www.ansible.com/)
 
 **Ansible** is a radically simple IT automation engine that automates cloud provisioning, configuration management, application deployment, intra-service orchestration, and many other IT needs.
 
