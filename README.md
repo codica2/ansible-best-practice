@@ -155,7 +155,7 @@ As soon as you log in, you'll see your host and inventory status, all the recent
 
 [Documentation](https://www.ansible.com/products/tower)
 ## License
-Copyright © 2015-2018 Codica. It is released under the [MIT License](https://opensource.org/licenses/MIT).
+Copyright © 2015-2019 Codica. It is released under the [MIT License](https://opensource.org/licenses/MIT).
 
 ## About Codica
 
